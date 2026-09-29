@@ -1,0 +1,59 @@
+{
+  "method": "Tensor-SN-DSRRANS",
+  "status": "frozen",
+  "dataset": "data/dsrrans",
+  "case": "case_0p8_nonLinearRShat",
+  "input_transform": "tanh(Lambda[:, :2] / 2)",
+  "tensor_bases": "first three Tensors channels",
+  "scored_components": [0, 1, 4, 8],
+  "dictionary": {
+    "type": "three-channel bivariate canonical monomials",
+    "max_total_degree": 12,
+    "candidate_terms": 273
+  },
+  "coefficient_fit": "joint least squares after every selected term",
+  "base_selection": "largest exact one-step refitted SSE reduction",
+  "term_budget": 100,
+  "sobolev": {
+    "signature": "flattened value and exact invariant-gradient of phi(I1,I2) * T_k with T_k held fixed",
+    "lambda_value": 1.0,
+    "lambda_gradient": 0.005,
+    "geometry_rows": 9600,
+    "geometry_scope": "within coefficient channel",
+    "target_derivative_used": false,
+    "epsilon_selection": 0.06,
+    "selection_rule": "among candidates with SSE reduction >= (1-epsilon) times Base-best, choose maximum conditional Sobolev novelty",
+    "tau": 0.31622776601683794
+  },
+  "recommended_pruning": {
+    "method": "Base exact-loss backward pruning from the 100-term Tensor-SN support",
+    "target_term_budgets": [80, 60, 40, 30, 20]
+  },
+  "full_data_protocol": {
+    "fit_fraction": 1.0,
+    "metrics": ["inv_nrmse", "energy_r2"]
+  },
+  "paired_validation_protocol": {
+    "fit_fraction": 0.75,
+    "fixed_term_counts": [20, 40, 60, 80, 100],
+    "split_seeds": [
+      1000003,
+      1000039,
+      1000081,
+      1000099,
+      1000117,
+      1000121,
+      1000133,
+      1000151,
+      1000159,
+      1000171,
+      1000183,
+      1000187,
+      1000193,
+      1000199,
+      1000211,
+      1000213
+    ],
+    "model_selection_on_validation": false
+  }
+}

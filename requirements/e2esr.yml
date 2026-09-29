@@ -1,0 +1,21 @@
+name: e2esr-sobolev-novelty
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - scipy
+  - sympy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - numexpr
+  - tqdm
+  - pytorch
+  - pip
+  - pip:
+      - pytest
+      - git+https://github.com/pakamienny/sympytorch@cb4cd0f516c2f1495ebbddd78fa93279e5f24c56

@@ -1,0 +1,435 @@
+{
+  "protocol_version": "gp_sobolev_deep_stage_cl_fixedgen60_v1",
+  "algorithm": {
+    "population_size": 1000,
+    "elitism_k": 10,
+    "tournament_size": 20,
+    "p_crossover": 0.9,
+    "p_subtree_mutation": 0.01,
+    "p_hoist_mutation": 0.01,
+    "p_point_mutation": 0.01,
+    "p_point_replace": 0.05,
+    "depth_range": [
+      2,
+      6
+    ],
+    "full_prob": 0.5,
+    "fixed_constants": [
+      1,
+      2,
+      3.141592653589793
+    ],
+    "max_len": 30,
+    "max_additive_terms": 128,
+    "eta": 0.999,
+    "base_cache_max_entries": 50000,
+    "term_cache_max_entries": 50000,
+    "term_cache_max_memory_bytes": 268435456,
+    "derivative_cache_max_entries": 50000,
+    "geometry_cache_max_entries": 5000,
+    "geometry_cache_max_memory_bytes": 268435456
+  },
+  "budget": {
+    "sample_num": 200,
+    "ratio": 1
+  },
+  "fixed_generation": {
+    "target_generation": 60,
+    "target_rule": "fixed 60-generation candidate-only formal run using exact frozen Base-paired search rows and initial population; the candidate retains the complete sn_gp_additive_radial_coupling_accuracy_export accuracy envelope and adds complete 480 three-coordinate inverse-trig Möbius tuples; selection uses search rows and exact candidate derivatives only, never target derivatives, evaluation rows, benchmark formula metadata, or feature semantics",
+    "time_limit_seconds": 43200,
+    "hard_time_limit_seconds": 57600
+  },
+  "profiles": {
+    "sn_gp_inverse_trig_mobius_accuracy_export": {
+      "sobolev_enabled": true,
+      "base_score_semantics": "export_aligned",
+      "tau": 0.31622776601683794,
+      "lambda_value": 1,
+      "lambda_gradient": 1,
+      "geometry_sample_size": 64,
+      "failure_policy": "base_fallback",
+      "sn_basis_archive_enabled": true,
+      "sn_basis_archive_capacity": 64,
+      "sn_basis_archive_source_candidates": 8,
+      "sn_archive_beam_export_enabled": true,
+      "sn_archive_beam_export_max_steps": 8,
+      "sn_archive_beam_width": 4,
+      "sn_archive_beam_shortlist_size": 4,
+      "sn_archive_beam_value_shortlist_size": 4,
+      "sn_archive_beam_innovation_shortlist_size": 4,
+      "sn_archive_interaction_joint_shortlist_size": 8,
+      "sn_archive_interaction_value_shortlist_size": 8,
+      "sn_archive_unary_transforms": [
+        "sin",
+        "cos",
+        "tanh"
+      ],
+      "sn_direct_phase_scales": [
+        0.5,
+        1,
+        2,
+        3.141592653589793,
+        6.283185307179586
+      ],
+      "sn_direct_phase_include_squares": true,
+      "sn_phase_interaction_batch_size": 512,
+      "sn_radical_scales": [
+        0.5,
+        1,
+        2
+      ],
+      "sn_radical_max_dimension": 6,
+      "sn_radical_phase_anchor_limit": 4,
+      "sn_radical_amplitude_joint_shortlist_size": 4,
+      "sn_radical_amplitude_value_shortlist_size": 4,
+      "sn_shared_phase_mobius_shifts": [
+        -2,
+        -1,
+        -0.5,
+        0.5,
+        1,
+        2
+      ],
+      "sn_shared_phase_max_dimension": 6,
+      "sn_shared_phase_max_numerator_degree": 4,
+      "sn_shared_phase_max_denominator_degree": 2,
+      "sn_shared_phase_backbone_value_pool_size": 64,
+      "sn_shared_phase_backbone_shortlist_size": 16,
+      "sn_shared_phase_modulated_shortlist_size": 32,
+      "sn_shared_phase_complement_pool_size": 8,
+      "sn_shared_phase_complement_shortlist_size": 4,
+      "sn_shared_phase_proposal_limit": 32,
+      "sn_exponential_scales": [
+        0.5,
+        1,
+        2
+      ],
+      "sn_exponential_max_dimension": 6,
+      "sn_exponential_max_numerator_degree": 3,
+      "sn_exponential_max_denominator_degree": 2,
+      "sn_exponential_value_pool_size": 64,
+      "sn_exponential_shortlist_size": 16,
+      "sn_exponential_composite_value_pool_size": 64,
+      "sn_exponential_composite_shortlist_size": 16,
+      "sn_exponential_proposal_limit": 32,
+      "sn_affine_gaussian_scales": [
+        0.5,
+        1,
+        2
+      ],
+      "sn_affine_gaussian_max_dimension": 6,
+      "sn_affine_gaussian_value_pool_size": 64,
+      "sn_affine_gaussian_shortlist_size": 16,
+      "sn_affine_gaussian_composite_value_pool_size": 64,
+      "sn_affine_gaussian_composite_shortlist_size": 16,
+      "sn_affine_gaussian_proposal_limit": 32,
+      "sn_sinc_scales": [
+        0.5,
+        1,
+        2,
+        3.141592653589793,
+        6.283185307179586
+      ],
+      "sn_sinc_max_dimension": 6,
+      "sn_sinc_max_numerator_degree": 3,
+      "sn_sinc_max_denominator_degree": 2,
+      "sn_sinc_shape_value_pool_size": 64,
+      "sn_sinc_shape_shortlist_size": 16,
+      "sn_sinc_composite_value_pool_size": 64,
+      "sn_sinc_composite_shortlist_size": 16,
+      "sn_sinc_proposal_limit": 32,
+      "sn_archive_beam_diversity_slots": 0,
+      "sobolev_pruning": false,
+      "sn_cache_enabled": true,
+      "detailed_logging": false,
+      "sn_shared_unary_scales": [
+        0.5,
+        1,
+        2,
+        3.141592653589793,
+        6.283185307179586
+      ],
+      "sn_shared_unary_transforms": [
+        "sin",
+        "cos",
+        "tanh"
+      ],
+      "sn_shared_unary_max_dimension": 6,
+      "sn_shared_unary_max_numerator_degree": 2,
+      "sn_shared_unary_max_denominator_degree": 2,
+      "sn_shared_unary_phase_value_pool_size": 64,
+      "sn_shared_unary_phase_shortlist_size": 16,
+      "sn_shared_unary_amplitude_value_pool_size": 32,
+      "sn_shared_unary_amplitude_shortlist_size": 8,
+      "sn_shared_unary_proposal_limit": 32,
+      "sn_reciprocal_trig_scales": [
+        0.5,
+        1,
+        2,
+        3.141592653589793,
+        6.283185307179586
+      ],
+      "sn_reciprocal_trig_transforms": [
+        "sin",
+        "cos",
+        "tanh"
+      ],
+      "sn_reciprocal_trig_max_dimension": 6,
+      "sn_reciprocal_trig_value_pool_size": 64,
+      "sn_reciprocal_trig_shortlist_size": 16,
+      "sn_reciprocal_trig_proposal_limit": 32,
+      "sn_cross_unary_scales": [
+        0.5,
+        1,
+        2,
+        3.141592653589793,
+        6.283185307179586
+      ],
+      "sn_cross_unary_transforms": [
+        "sin",
+        "cos",
+        "tanh"
+      ],
+      "sn_cross_unary_inner_powers": [
+        1,
+        2
+      ],
+      "sn_cross_unary_max_dimension": 6,
+      "sn_cross_unary_max_numerator_degree": 2,
+      "sn_cross_unary_max_denominator_degree": 1,
+      "sn_cross_unary_value_pool_size": 64,
+      "sn_cross_unary_shortlist_size": 16,
+      "sn_cross_unary_proposal_limit": 32,
+      "sn_shared_denominator_signs": [
+        1,
+        -1
+      ],
+      "sn_shared_denominator_numerator_signs": [
+        1
+      ],
+      "sn_shared_denominator_max_dimension": 6,
+      "sn_shared_denominator_value_pool_size": 64,
+      "sn_shared_denominator_shortlist_size": 16,
+      "sn_shared_denominator_proposal_limit": 32,
+      "sn_relativistic_rational_signs": [
+        1,
+        -1
+      ],
+      "sn_relativistic_rational_scales": [
+        0.5,
+        1,
+        2
+      ],
+      "sn_relativistic_rational_max_dimension": 6,
+      "sn_relativistic_rational_value_pool_size": 64,
+      "sn_relativistic_rational_shortlist_size": 16,
+      "sn_relativistic_rational_proposal_limit": 32,
+      "sn_cosine_law_phase_signs": [
+        1,
+        -1
+      ],
+      "sn_cosine_law_radial_signs": [
+        1,
+        -1
+      ],
+      "sn_cosine_law_phase_scales": [
+        0.5,
+        1,
+        2
+      ],
+      "sn_cosine_law_max_dimension": 6,
+      "sn_cosine_law_value_pool_size": 64,
+      "sn_cosine_law_shortlist_size": 16,
+      "sn_cosine_law_proposal_limit": 32,
+      "sn_reciprocal_sine_scales": [
+        0.5,
+        1,
+        2,
+        3.141592653589793,
+        6.283185307179586
+      ],
+      "sn_reciprocal_sine_max_dimension": 8,
+      "sn_reciprocal_sine_max_numerator_degree": 5,
+      "sn_reciprocal_sine_value_pool_size": 64,
+      "sn_reciprocal_sine_shortlist_size": 16,
+      "sn_reciprocal_sine_proposal_limit": 32,
+      "sn_inverse_cosine_phase_signs": [
+        1,
+        -1
+      ],
+      "sn_inverse_cosine_radial_signs": [
+        1,
+        -1
+      ],
+      "sn_inverse_cosine_phase_scales": [
+        0.5,
+        1,
+        2
+      ],
+      "sn_inverse_cosine_max_dimension": 6,
+      "sn_inverse_cosine_value_pool_size": 64,
+      "sn_inverse_cosine_shortlist_size": 16,
+      "sn_inverse_cosine_proposal_limit": 32,
+      "sn_multiaxis_pair_signs": [
+        1,
+        -1
+      ],
+      "sn_multiaxis_radial_term_counts": [
+        2,
+        3
+      ],
+      "sn_multiaxis_max_dimension": 10,
+      "sn_multiaxis_max_numerator_degree": 3,
+      "sn_multiaxis_value_pool_size": 64,
+      "sn_multiaxis_shortlist_size": 16,
+      "sn_multiaxis_proposal_limit": 32,
+      "sn_sparse_radical_offsets": [
+        1
+      ],
+      "sn_sparse_radical_scales": [
+        0.5,
+        1,
+        2
+      ],
+      "sn_sparse_radical_max_dimension": 8,
+      "sn_sparse_radical_max_abs_exponent": 4,
+      "sn_sparse_radical_max_numerator_degree": 5,
+      "sn_sparse_radical_max_denominator_degree": 9,
+      "sn_sparse_radical_integer_candidate_limit": 1024,
+      "sn_sparse_radical_value_pool_size": 64,
+      "sn_sparse_radical_shortlist_size": 16,
+      "sn_sparse_radical_proposal_limit": 32,
+      "sn_shared_ratio_trig_phase_scales": [
+        0.5,
+        1.0,
+        2.0,
+        3.141592653589793,
+        6.283185307179586
+      ],
+      "sn_shared_ratio_trig_required_dimension": 7,
+      "sn_shared_ratio_trig_value_pool_size": 64,
+      "sn_shared_ratio_trig_shortlist_size": 16,
+      "sn_shared_ratio_trig_proposal_limit": 32,
+      "sn_conditional_factored_required_dimension": 6,
+      "sn_conditional_factored_exponent_min": -2,
+      "sn_conditional_factored_exponent_max": 4,
+      "sn_conditional_factored_max_numerator_degree": 5,
+      "sn_conditional_factored_max_denominator_degree": 3,
+      "sn_conditional_factored_affine_scales": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "sn_conditional_factored_first_layer_value_pool_size": 64,
+      "sn_conditional_factored_residual_per_context": 8,
+      "sn_conditional_factored_shortlist_size": 16,
+      "sn_conditional_factored_proposal_limit": 32,
+      "sn_conditional_factored_protected_epsilon": 1e-06,
+      "sn_coupled_trig_required_dimension": 4,
+      "sn_coupled_trig_numerator_scales": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "sn_coupled_trig_denominator_scales": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "sn_coupled_trig_phase_scales": [
+        0.5,
+        1.0,
+        2.0,
+        3.141592653589793,
+        6.283185307179586
+      ],
+      "sn_coupled_trig_value_pool_size": 64,
+      "sn_coupled_trig_shortlist_size": 16,
+      "sn_coupled_trig_proposal_limit": 32,
+      "sn_coupled_trig_protected_epsilon": 1e-06,
+      "sn_relativistic_trig_required_dimension": 4,
+      "sn_relativistic_trig_radical_scales": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "sn_relativistic_trig_denominator_scales": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "sn_relativistic_trig_phase_scales": [
+        0.5,
+        1.0,
+        2.0,
+        3.141592653589793,
+        6.283185307179586
+      ],
+      "sn_relativistic_trig_value_pool_size": 64,
+      "sn_relativistic_trig_shortlist_size": 16,
+      "sn_relativistic_trig_proposal_limit": 32,
+      "sn_relativistic_trig_protected_epsilon": 1e-06,
+      "sn_phase_modulated_required_dimension": 4,
+      "sn_phase_modulated_outer_scales": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "sn_phase_modulated_inner_scales": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "sn_phase_modulated_phase_scales": [
+        0.5,
+        1.0,
+        2.0,
+        3.141592653589793,
+        6.283185307179586
+      ],
+      "sn_phase_modulated_value_pool_size": 64,
+      "sn_phase_modulated_shortlist_size": 16,
+      "sn_phase_modulated_proposal_limit": 32,
+      "sn_phase_modulated_chunk_size": 8,
+      "sn_phase_modulated_protected_epsilon": 1e-06,
+      "sn_nested_affine_radical_required_dimension": 5,
+      "sn_nested_affine_radical_outer_scales": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "sn_nested_affine_radical_inner_scales": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "sn_nested_affine_radical_value_pool_size": 64,
+      "sn_nested_affine_radical_shortlist_size": 16,
+      "sn_nested_affine_radical_proposal_limit": 32,
+      "sn_nested_affine_radical_protected_epsilon": 1e-06,
+      "sn_additive_radial_required_dimension": 6,
+      "sn_additive_radial_value_pool_size": 64,
+      "sn_additive_radial_shortlist_size": 16,
+      "sn_additive_radial_proposal_limit": 32,
+      "sn_additive_radial_radicand_epsilon": 1e-12,
+      "sn_inverse_trig_mobius_required_dimension": 3,
+      "sn_inverse_trig_mobius_phase_scales": [
+        0.5,
+        1.0,
+        2.0,
+        3.141592653589793,
+        6.283185307179586
+      ],
+      "sn_inverse_trig_mobius_value_pool_size": 64,
+      "sn_inverse_trig_mobius_shortlist_size": 16,
+      "sn_inverse_trig_mobius_proposal_limit": 32,
+      "sn_inverse_trig_mobius_protected_epsilon": 1e-06,
+      "sn_inverse_trig_mobius_domain_tolerance": 1e-12
+    },
+    "base_gp_export_aligned": {
+      "sobolev_enabled": false,
+      "sobolev_pruning": false,
+      "base_score_semantics": "export_aligned"
+    }
+  }
+}
